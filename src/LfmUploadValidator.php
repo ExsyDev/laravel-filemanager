@@ -63,7 +63,7 @@ class LfmUploadValidator
 
     public function isNotExcutable()
     {
-        $mimetype = $this->file->mimeType();
+        $mimetype = $this->file->getMimeType();
 
         $excutable = ['text/x-php'];
 
@@ -76,7 +76,7 @@ class LfmUploadValidator
 
     public function mimeTypeIsValid($available_mime_types)
     {
-        $mimetype = $this->file->mimeType();
+        $mimetype = $this->file->getMimeType();
 
         if (false === in_array($mimetype, $available_mime_types)) {
             throw new InvalidMimeTypeException($mimetype);
