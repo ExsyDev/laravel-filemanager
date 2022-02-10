@@ -3,7 +3,6 @@
 namespace UniSharp\LaravelFilemanager;
 
 use Illuminate\Support\Facades\Storage;
-use League\Flysystem\Cached\CachedAdapter;
 
 class LfmStorageRepository
 {
