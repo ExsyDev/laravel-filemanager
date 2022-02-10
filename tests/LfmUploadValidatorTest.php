@@ -95,7 +95,7 @@ class LfmUploadValidatorTest extends TestCase
     public function testPassesIsNotExcutable()
     {
         $uploaded_file = m::mock(UploadedFile::class);
-        $uploaded_file->shouldReceive('getMimeType')->andReturn('image/jpeg');
+        $uploaded_file->shouldReceive('mimeType')->andReturn('image/jpeg');
 
         $validator = new LfmUploadValidator($uploaded_file);
 
@@ -105,7 +105,7 @@ class LfmUploadValidatorTest extends TestCase
     public function testFailsIsNotExcutable()
     {
         $uploaded_file = m::mock(UploadedFile::class);
-        $uploaded_file->shouldReceive('getMimeType')->andReturn('text/x-php');
+        $uploaded_file->shouldReceive('mimeType')->andReturn('text/x-php');
 
         $validator = new LfmUploadValidator($uploaded_file);
 
@@ -117,7 +117,7 @@ class LfmUploadValidatorTest extends TestCase
     public function testPassesMimeTypeIsValid()
     {
         $uploaded_file = m::mock(UploadedFile::class);
-        $uploaded_file->shouldReceive('getMimeType')->andReturn('image/jpeg');
+        $uploaded_file->shouldReceive('mimeType')->andReturn('image/jpeg');
 
         $validator = new LfmUploadValidator($uploaded_file);
 
@@ -127,7 +127,7 @@ class LfmUploadValidatorTest extends TestCase
     public function testFailsMimeTypeIsValid()
     {
         $uploaded_file = m::mock(UploadedFile::class);
-        $uploaded_file->shouldReceive('getMimeType')->andReturn('image/jpeg');
+        $uploaded_file->shouldReceive('mimeType')->andReturn('image/jpeg');
 
         $validator = new LfmUploadValidator($uploaded_file);
 
